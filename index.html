@@ -99,7 +99,7 @@
       background: rgba(255, 255, 255, 0.72);
       cursor: pointer;
       box-shadow: 0 9px 22px rgba(0, 84, 135, 0.20);
-      animation: alarm-nudge 1s ease-in-out infinite;
+      animation: alarm-nudge 3s ease-in-out infinite;
       transform-origin: 50% 55%;
       transition: transform 160ms ease, box-shadow 160ms ease;
       -webkit-tap-highlight-color: transparent;
@@ -128,22 +128,22 @@
     }
 
     @keyframes alarm-nudge {
-      0%, 72%, 100% {
+      0%, 89%, 100% {
         transform: rotate(0deg) scale(1);
       }
-      77% {
+      91% {
         transform: rotate(-5deg) scale(1.03);
       }
-      82% {
+      93% {
         transform: rotate(5deg) scale(1.03);
       }
-      87% {
+      95% {
         transform: rotate(-4deg) scale(1.03);
       }
-      92% {
+      97% {
         transform: rotate(4deg) scale(1.03);
       }
-      97% {
+      99% {
         transform: rotate(0deg) scale(1);
       }
     }
