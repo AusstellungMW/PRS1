@@ -229,6 +229,7 @@
         grid-template-columns: 92px minmax(0, 1fr);
         gap: 12px;
         margin-bottom: 20px;
+        padding-right: 88px;
       }
 
       .school-logo {
@@ -243,7 +244,8 @@
 
       h1 {
         text-align: left;
-        font-size: clamp(1.32rem, 5.3vw, 2rem);
+        font-size: clamp(1.18rem, 4.7vw, 1.78rem);
+        line-height: 1.08;
       }
 
       .audio-button {
@@ -264,6 +266,7 @@
     @media (max-width: 440px) {
       .header {
         grid-template-columns: 70px minmax(0, 1fr);
+        padding-right: 76px;
       }
 
       .school-logo {
@@ -284,12 +287,6 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .audio-button {
-        animation: none;
-        transition: none;
-      }
-    }
   </style>
 </head>
 
