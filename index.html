@@ -90,6 +90,10 @@
     }
 
     .audio-button {
+      position: fixed;
+      top: calc(14px + env(safe-area-inset-top));
+      right: calc(14px + env(safe-area-inset-right));
+      z-index: 1000;
       flex: 0 0 auto;
       width: clamp(66px, 7vw, 92px);
       height: clamp(66px, 7vw, 92px);
@@ -371,14 +375,18 @@
 
     button.addEventListener("click", async () => {
       try {
-        if (audio.paused) {
-          await audio.play();
-          setPlayingState(true);
-        } else {
+        if (!audio.paused) {
           audio.pause();
+          audio.currentTime = 0;
           setPlayingState(false);
+          return;
         }
+
+        audio.currentTime = 0;
+        await audio.play();
+        setPlayingState(true);
       } catch (error) {
+        setPlayingState(false);
         console.error("1.mp3 konnte nicht gestartet werden.", error);
       }
     });
