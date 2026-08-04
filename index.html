@@ -95,32 +95,31 @@
       right: calc(14px + env(safe-area-inset-right));
       z-index: 1000;
       flex: 0 0 auto;
-      width: clamp(66px, 7vw, 92px);
-      height: clamp(66px, 7vw, 92px);
-      padding: 4px;
+      width: clamp(82px, 9vw, 118px);
+      height: clamp(82px, 9vw, 118px);
+      padding: 0;
       border: 0;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.72);
+      background: transparent;
       cursor: pointer;
-      box-shadow: 0 9px 22px rgba(0, 84, 135, 0.20);
       animation: alarm-nudge 3s ease-in-out infinite;
       transform-origin: 50% 55%;
-      transition: transform 160ms ease, box-shadow 160ms ease;
+      transition: transform 160ms ease;
       -webkit-tap-highlight-color: transparent;
     }
 
     .audio-button:hover {
-      box-shadow: 0 12px 28px rgba(0, 84, 135, 0.30);
+      transform: scale(1.03);
     }
 
     .audio-button:focus-visible {
       outline: 4px solid #ffb51b;
       outline-offset: 4px;
+      border-radius: 12px;
     }
 
     .audio-button.playing {
       animation-play-state: paused;
-      transform: scale(1.04);
+      transform: scale(1.05);
     }
 
     .audio-button img {
@@ -129,6 +128,7 @@
       height: 100%;
       object-fit: contain;
       pointer-events: none;
+      filter: drop-shadow(0 6px 12px rgba(0, 84, 135, 0.16));
     }
 
     @keyframes alarm-nudge {
@@ -247,9 +247,8 @@
       }
 
       .audio-button {
-        width: 64px;
-        height: 64px;
-        border-radius: 19px;
+        width: 76px;
+        height: 76px;
       }
 
       .photo-grid {
@@ -276,9 +275,8 @@
       }
 
       .audio-button {
-        width: 56px;
-        height: 56px;
-        border-radius: 16px;
+        width: 68px;
+        height: 68px;
       }
 
       .card-text {
